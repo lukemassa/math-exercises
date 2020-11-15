@@ -1,0 +1,9 @@
+
+# Created by TeXShop
+*.log
+*.synctex.gz
+*.aux
+*.tex.swp
+
+# TODO: Should I keep .pdf files?
+*.pdf
