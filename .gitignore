@@ -6,4 +6,4 @@
 *.tex.swp
 
 # TODO: Should I keep .pdf files?
-*.pdf
+#*.pdf
