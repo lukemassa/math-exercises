@@ -1,13 +1,31 @@
 \documentclass{article}
 
-\usepackage{mathrsfs,amssymb}
+\usepackage{mathrsfs,amssymb,yfonts}
 
 \begin{document}
 
 \section{Let $A$ be a commutative ring. Let $M$ be a module, and $N$ a submodule. Let $N=Q_1 \cap ... \cap Q_r$ be a primary decomposition of $N$. Let $\bar{Q}_i = Q_1/N$. Show that $0 = \bar{Q}_1 \cap ... \bar{Q}_r$ is a primary decomposition of $0$ in $M/N$. State and prove the converse.}
 
-Firstly, let's take a concrete example, $A=\mathbb{Z}$, $M=\mathbb{Z}_{24}$, $N=\mathbb{Z}_{12}$.
+Firstly, let's take a concrete example, $A=\mathbb{Z}$, $M=\mathbb{Z}$, $N=12\mathbb{Z}$.
 
-$Q
+One primary decomposition (the one that is in some sense minimal) of $12\mathbb{Z}$ is $4\mathbb{Z}$, $3\mathbb{Z}$.
+
+$N=12\mathbb{Z}$ itself is not primary since $3_{\mathbb{Z}_{12}}$ is neither injective (it sends both $0$ and $4$ to 0) nor nilpotent (no power of the homomorphism brings 1 to 0, that is to say $3^n \bmod 12 \ne 0$).
+
+So now $\bar{Q}_1 = 4\mathbb{Z} / 12\mathbb{Z} \cong \mathbb{Z}_3$ and $\bar{Q}_2 = 3\mathbb{Z} / 12\mathbb{Z} \cong \mathbb{Z}_4$. Since $M/N = \mathbb{Z}_12$, $\mathbb{Z}_4$ and $\mathbb{Z}_3$ are in fact primary decompositions with an intersection at $0$. 
+
+\section{Let $\mathfrak{p}$ be a prime ideal and $\mathfrak{a}$, $\mathfrak{b}$ be ideals of $A$. If $\mathfrak{a b} \subset \mathfrak{p}$, show that $\mathfrak{a} \subset \mathfrak{p}$ or $\mathfrak{b} \subset \mathfrak{p}.$}
+
+Take $a_i$ to be an arbitrary member of $\mathfrak{a}$ and $b_i$ to be an arbitrary member of $\mathfrak{b}$. If $a_i b_i$ is in $\mathfrak{p}$, then, since $\mathfrak{p}$ is prime, either $a_i$ is in $\mathfrak{p}$ or $b_i$ is.
+
+Say $a_i$ is. Now we have to show that all of $\mathfrak{a}$ is thus in $\mathfrak{p}$.
+
+\section{Let $\mathfrak{q}$ be a primary ideal. Let $\mathfrak{a}$, $\mathfrak{b}$ be ideals, and assume $\mathfrak{ab} \subset \mathfrak{q}$. Assume that $\mathfrak{b}$ is finitely generated. Show that $\mathfrak{a} \subset  \mathfrak{q}$ or there exists some positive integer $n$ such that $\mathfrak{b}^n \subset \mathfrak{q}$.}
+
+Same argument as above, just replacing prime for prime powers.
+
+\section{Let $A$ be Noetherian and let $\mathfrak{q}$ be a $\mathfrak{p}-$primary ideal. Show that there exists some $n \ge 1$ such that $\mathfrak{p}^n \subset \mathfrak{q}$}
+
+I'm having trouble understanding what it means to be $\mathfrak{p}-$primary.
 
 \end{document}
