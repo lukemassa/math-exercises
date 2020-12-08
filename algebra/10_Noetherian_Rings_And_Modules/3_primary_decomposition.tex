@@ -1,0 +1,71 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amssymb,yfonts}
+
+\begin{document}
+
+\section{Let $A$ be a commutative ring. Let $M$ be a module, and $N$ a submodule. Let $N=Q_1 \cap ... \cap Q_r$ be a primary decomposition of $N$. Let $\bar{Q}_i = Q_i/N$. Show that $0 = \bar{Q}_1 \cap ... \bar{Q}_r$ is a primary decomposition of $0$ in $M/N$. State and prove the converse.}
+
+1. Each $\bar{Q_i}$  is primary
+
+Given $a \in A$, $a_{M/Q_i}$ is either injective or nilpotent, we must show that, given $a \in A$, $a_{ (M/N) / ( Q_i / N)}$ is either injective or nilpotent.
+
+The function $a_{M/Q_i}$ is a particular function from $M/Q_i$ to itself. Via the isomorphism $\sigma: M/Q_i \mapsto (M/N) / ( Q_i / N)$, define $\hat{a}$ as a function from  $(M/N) / ( Q_i / N)$ to itself (Is just quoting the isomorphism theorem sufficient here?)
+
+Since they are both multiplication by $a$, $a_{ (M/N) / ( Q_i / N)}$ and $\hat{a}$ are the same function on  $(M/N) / ( Q_i / N)$. Thus if $a_{M/Q_i}$ is injective (resp. nilpotent) then  $a_{ (M/N) / ( Q_i / N)}$ is injective (resp. nilpotent).
+
+\noindent
+2. Their intersection is $0 = \bar{Q}_1 \cap ... \cap \bar{Q}_r$
+
+Assume this is false.
+
+Take element $a \ne (0) \in \bar{Q}_1 \cap ... \cap \bar{Q}_r$. (Better way to write this?) The pre-image of $a$ under the canonical homomorphism $M \mapsto M/N$ is also not in $N$, since $N$ is exactly the kernel of this homomorphism. 
+
+However it $a$ *is* in each $\bar{Q}_i$ so its preimage has to be in $Q_i$, so has to be in $N$, a contradiction.
+
+
+\noindent
+3. If 0 is primary decom, then N is primary decomp
+
+Showing that $Q_i$ is primary given that $\bar{Q}_i$ is primary is identical to part 1 by following the isomorphism $ M / Q_i \cong (M/N)/(Q_i/N)$ the other direction.
+
+The proof that the intersection is N is also directly analogous to part 2, shown here:
+
+Assume it is false.
+
+Take some $x$ not in $N$ but in $N=Q_1 \cap ... \cap Q_r$. Under the canonical homomorphism the image of $x$ is in each of $\bar{Q}$, thus is $0$. However this is a contradiction since the image of $x$ is non-zero.
+
+
+\section{Let $\mathfrak{p}$ be a prime ideal and $\mathfrak{a}$, $\mathfrak{b}$ be ideals of $A$. If $\mathfrak{a b} \subset \mathfrak{p}$, show that $\mathfrak{a} \subset \mathfrak{p}$ or $\mathfrak{b} \subset \mathfrak{p}.$}
+
+If $\mathfrak{a} \not\subset \mathfrak{p}$ and $\mathfrak{b} \not\subset \mathfrak{p}$, prove that $\mathfrak{ab} \not\subset \mathfrak{p}$
+
+Pick $a$ in $\mathfrak{a}$ and $b$ in $\mathfrak{b}$ but not in $\mathfrak{p}$. Since $\mathfrak{p}$ is prime, $ab$ cannot be in $\mathfrak{p}$.
+
+
+\section{Let $\mathfrak{q}$ be a primary ideal. Let $\mathfrak{a}$, $\mathfrak{b}$ be ideals, and assume $\mathfrak{ab} \subset \mathfrak{q}$. Assume that $\mathfrak{b}$ is finitely generated. Show that $\mathfrak{a} \subset  \mathfrak{q}$ or there exists some positive integer $n$ such that $\mathfrak{b}^n \subset \mathfrak{q}$.}
+
+If $\mathfrak{a} \not\subset \mathfrak{q}$ and there is no integer $n$ such that $\mathfrak{b}^n \not\subset \mathfrak{q}$, prove that $\mathfrak{ab} \not\subset \mathfrak{q}$
+
+Pick $a$ in $\mathfrak{a}$ but not in $\mathfrak{q}$. Pick $b$ in $\mathfrak{b}$ such that there is no integer $n$ that $b^n$ is in $\mathfrak{q}$. Since $\mathfrak{q}$ is primary.... hmm can't seem to bring this one together.
+
+\section{Let $A$ be Noetherian and let $\mathfrak{q}$ be a $\mathfrak{p}-$primary ideal. Show that there exists some $n \ge 1$ such that $\mathfrak{p}^n \subset \mathfrak{q}$}
+
+$\mathfrak{q}$ being $\mathfrak{p}$-primary means that the radical of $\mathfrak{q}$ is $\mathfrak{p}$. Hence $\sqrt{\mathfrak{q}} = \{r \in A | r^n \in \mathfrak{q}\} = \mathfrak{p}$
+
+This means for every p in p, there's an $n$ such that $p^n$ is in q. Note that if $p^n$ is in q, then $p^N$ where $N>n$ is also in q (ideal absorbs multiplication from the ring). 
+
+Now just need to show there is a finite such $n$. This can been seen by observing that $A$ Noetherian, so eventually raising to a power has to "stabilize", so there is some finite smallest n at which this occurs.
+
+\break
+\break
+
+8. Let $A$ be a local ring. Show that any idempotent $\ne 0$ in $A$ is necessary the unit element. 
+
+We have to show that $e * e = e \Rightarrow e = 1$
+
+If $e$ is a unit, we're done (Left multiplication by $e^{-1}$ shows $e = 1$).
+
+So assume $e$ is not a unit. Then it must be in the maximal ideal $\mathfrak{m}$ (otherwise it would generate a proper ideal not contained in $\mathfrak{m}$). Not quite sure how to finish...
+
+\end{document}

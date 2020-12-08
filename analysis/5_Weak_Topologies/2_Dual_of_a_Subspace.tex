@@ -1,0 +1,22 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amssymb,amsmath}
+
+\begin{document}
+
+\section{If $p$ is a seminorm on $\mathscr{X}$, $\mathscr{M}$ is a linear manifold in $\mathscr{X}$, and $\bar{p}: \mathscr{X} / \mathscr{M} \mapsto [0,\infty]$ is defined by $\bar{p}(x + \mathscr{M}) = \inf\{p(x+y):y \in \mathscr{M}\}$, then $\bar{p}$ is a seminorm on $\mathscr{X} / \mathscr{M}$}.
+
+Triangle Inequality: Must show that $\bar{p}(x_1+x_2+M) \le \bar{p}(x_1+\mathscr{M}) + \bar{p}(x_2+\mathscr{M})$
+
+$\inf\{p(x_1 + x_2 + y) : y \in \mathscr{M}\} \le \inf\{p(x_1 + y) : y \in \mathscr{M}\} + \inf\{p(x_2 + y ): y \in \mathscr{M}\}$.
+
+Apply the triangle inequality somehow inside the infimums to expand into a larger expression that is still "less than or equal to" all the way through???
+
+Absolute homogeneity: Must show that $\bar{p}(\alpha x + \mathscr{M}) = |\alpha|\bar{p}(x + \mathscr{M})$
+
+$\inf\{p( \alpha x +y) : y \in \mathscr{M}\} = \inf\{p( \alpha x + \alpha y) : y \in \mathscr{M}\} = \inf\{  | \alpha | p( x +y) : y \in \mathscr{M}\}  =  | \alpha | \inf\{p( x +y) : y \in \mathscr{M}\} $
+
+The first equality is justified since both $y$ and $\alpha y$ are in $\mathscr{M}$, and the second is since $p$ is itself a seminorm.
+
+
+\end{document}
