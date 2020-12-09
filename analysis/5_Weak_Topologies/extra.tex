@@ -1,0 +1,43 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amssymb,amsmath}
+
+\begin{document}
+
+\section{Prove that the given set of functions converges weakly but not strongly}
+
+Consider $\mathscr{X} = C[0,1]$, the Banach Space of continuous functions on $[0,1]$ with the supremum norm.
+
+Consider sequence of functions $(f_n)_{n \ge 2}$, where
+
+$$
+f_n(x) = \left\{
+        \begin{array}{ll}
+            xn & \quad 0 \leq x \leq \frac{1}{n} \\
+            2 - nx & \quad \frac{1}{n} < x \leq \frac{2}{n} \\
+            0 & \quad \frac{2}{n} < x \le 1
+        \end{array}
+    \right.
+ $$
+ 
+ 
+ 
+(Starts at 0, goes up to 1 at 1/n, down to 0 at 2/n, and stays flat from there).
+
+Denote $z \in \mathscr{X}$ as function $z(x) = 0$ for $0 \le x \le 1$.
+
+Claim is that $f_n \rightharpoonup z$, but that $f_n \not\rightarrow z$.
+
+First, $|| f_n - z || = || f_n || = 1$ for all $n$, so $f_n$ does not converge to $z$ (TODO: Prove it doesn't converge at all?)
+
+Now, to show that $f_n \rightharpoonup 0$, we have to show that for every bounded linear functional $L$ on $\mathscr{X}$, $L(f_n) \rightarrow 0$
+
+A linear functional $L_g$ indexed by an $g \in \mathscr{X}$ is given by $L_g(f) = \int | f g | dx$.
+
+Define $\hat{f_n}$ as the function on $0 \le x \le 1$ that is 1 from $0 \le 2/n$ and 0 onward. This function is not continuous so not in $\mathscr{X}$, but is strictly larger than $f_n$.
+
+Take an arbitrary $L_{g_0}$. We will prove that $\int | \hat{f} g_0 | dx \rightarrow 0$, which will imply $\int | f g_0 | dx \rightarrow 0$, and thus all bounded linear functionals converge to $z$.
+
+$g_0$ achieves its maximum $M$ on $0 \le x \le 1$, thus the value of $\int | f_n g_0 | dx$ is broken into two parts: $0 \le 2/n$ where it is bounded by $(2/n)M$, and $2/n le 1$, where it is $0$. As $n \rightarrow \infty$, $(2/n)M \rightarrow 0$.
+
+\end{document}
