@@ -20,24 +20,21 @@ f_n(x) = \left\{
     \right.
  $$
  
+ $D_n = \{ \alpha \in \mathbb{F}: | \alpha | \le 1 \}$
+ 
  
  
 (Starts at 0, goes up to 1 at 1/n, down to 0 at 2/n, and stays flat from there).
 
-Denote $z \in \mathscr{X}$ as function $z(x) = 0$ for $0 \le x \le 1$.
+Denote $0 \in \mathscr{X}$ as function $z(x) = 0$ for $0 \le x \le 1$.
 
 Claim is that $f_n \rightharpoonup z$, but that $f_n \not\rightarrow z$.
 
-First, $|| f_n - z || = || f_n || = 1$ for all $n$, so $f_n$ does not converge to $z$ (TODO: Prove it doesn't converge at all?)
+First, $|| f_n - 0 || = || f_n || = 1$ for all $n$, so $f_n$ does not converge to $0$ (TODO: Prove it doesn't converge at all?)
 
-Now, to show that $f_n \rightharpoonup 0$, we have to show that for every bounded linear functional $L$ on $\mathscr{X}$, $L(f_n) \rightarrow 0$
+Suppose $L$ is a continuous linear functional such that $\lim_{n \to \infty} L(f_n) \ne 0$. Therefore there is some subsequence $b_n$ and $\varepsilon$ such that $L(b_n) > \varepsilon$. Choose a further subsequence of $b_n$, called $c_n$ where the $c_n$ have disjoint support
 
-A linear functional $L_g$ indexed by an $g \in \mathscr{X}$ is given by $L_g(f) = \int | f g | dx$.
+$d_n = \sum_{i=1}^n c_n$
 
-Define $\hat{f_n}$ as the function on $0 \le x \le 1$ that is 1 from $0 \le 2/n$ and 0 onward. This function is not continuous so not in $\mathscr{X}$, but is strictly larger than $f_n$.
-
-Take an arbitrary $L_{g_0}$. We will prove that $\int | \hat{f} g_0 | dx \rightarrow 0$, which will imply $\int | f g_0 | dx \rightarrow 0$, and thus all bounded linear functionals converge to $z$.
-
-$g_0$ achieves its maximum $M$ on $0 \le x \le 1$, thus the value of $\int | f_n g_0 | dx$ is broken into two parts: $0 \le 2/n$ where it is bounded by $(2/n)M$, and $2/n le 1$, where it is $0$. As $n \rightarrow \infty$, $(2/n)M \rightarrow 0$.
 
 \end{document}
