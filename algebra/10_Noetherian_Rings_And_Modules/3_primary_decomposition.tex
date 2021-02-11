@@ -45,17 +45,23 @@ Pick $a$ in $\mathfrak{a}$ and $b$ in $\mathfrak{b}$ but not in $\mathfrak{p}$. 
 
 \section{Let $\mathfrak{q}$ be a primary ideal. Let $\mathfrak{a}$, $\mathfrak{b}$ be ideals, and assume $\mathfrak{ab} \subset \mathfrak{q}$. Assume that $\mathfrak{b}$ is finitely generated. Show that $\mathfrak{a} \subset  \mathfrak{q}$ or there exists some positive integer $n$ such that $\mathfrak{b}^n \subset \mathfrak{q}$.}
 
-If $\mathfrak{a} \not\subset \mathfrak{q}$ and there is no integer $n$ such that $\mathfrak{b}^n \not\subset \mathfrak{q}$, prove that $\mathfrak{ab} \not\subset \mathfrak{q}$
+Assume that $\mathfrak{a} \not\subset \mathfrak{q}$. We will show that this implies there there exists some positive integer $n$ such that $\mathfrak{b}^n \subset \mathfrak{q}$. Take $a_0$ to be in $\mathfrak{a}$ but not in $\mathfrak{q}$. 
 
-Pick $a$ in $\mathfrak{a}$ but not in $\mathfrak{q}$. Pick $b$ in $\mathfrak{b}$ such that there is no integer $n$ that $b^n$ is in $\mathfrak{q}$. Since $\mathfrak{q}$ is primary.... hmm can't seem to bring this one together.
+An arbitrary element of $\mathfrak{b}$, being finitely generated, looks like $k_1 b_1 + k_2 b_2 + ... + k_r b_r$ (where $k_i$ are positive integers and $r$ and $n$ are unrelated). For each $k_i b_i$, since $a_0 (k_i b_i)$ in $\mathfrak{q}$ but $a_0$ is not and $\mathfrak{q}$ is primary, $(k_i b_i)^{n_i} \in \mathfrak{q}$ for some finite $n_i$. Our goal is to find some $n$ large enough such that every term of $(k_1 b_1 + k_2 b_2 + ... + k_r b_r)^n$ is in $\mathfrak{q}$, since, being additively closed, that would imply $b^n$ itself were in $\mathfrak{q}$.
+
+Take $n=\prod_{i=1}^{r} n_i$. Each term of $(k_1 b_1 + k_2 b_2 + ... + k_r b_r)^n$ is a homogenous monomial of degree $n$, thus in general looks like $\prod_{i=1}^{r} (k_i b_i)^{m_i}$ where the $m_i$'s sum to $n$.
+
+If any $m_i \ge n_i$, then the term itself will be in $\mathfrak{q}$, since $(k_i b_i)^{n_i}$ is in $\mathfrak{q}$ as are its subsequent powers and anything multiplied by it, since ideals absorb multiplication. 
+
+It is impossible for all $m_i < n_i$, since then they would not fully sum to $n$, so therefore at least one is and the term is in $\mathfrak{q}$. Since $r$ is finite, so too is $n$, thus proving the statement.
 
 \section{Let $A$ be Noetherian and let $\mathfrak{q}$ be a $\mathfrak{p}-$primary ideal. Show that there exists some $n \ge 1$ such that $\mathfrak{p}^n \subset \mathfrak{q}$}
 
 $\mathfrak{q}$ being $\mathfrak{p}$-primary means that the radical of $\mathfrak{q}$ is $\mathfrak{p}$. Hence $\sqrt{\mathfrak{q}} = \{r \in A | r^n \in \mathfrak{q}\} = \mathfrak{p}$
 
-This means for every p in p, there's an $n$ such that $p^n$ is in q. Note that if $p^n$ is in q, then $p^N$ where $N>n$ is also in q (ideal absorbs multiplication from the ring). 
-
-Now just need to show there is a finite such $n$. This can been seen by observing that $A$ Noetherian, so eventually raising to a power has to "stabilize", so there is some finite smallest n at which this occurs.
+Since $A$ is Noetherian, $\mathfrak{p}$ is finitely generated, so an arbitrarily element of $p$ is of the form $k_1 p1 + k_2 p_2 + ... + k_r p_r$, where $k_i$ and $r$ are positive integers. 
+ 
+For every $k_i p_i$, there's an $n_i$ such that $(k_i p_i)^{n_i}$ is in $\mathfrak{q}$. For the same reasoning as 3) above, $n=\prod_{i=1}^{r} n_i$ is such that this arbitrary $p$ is in $\mathfrak{q}$.
 
 \break
 \break

@@ -1,0 +1,36 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amssymb,amsmath}
+
+\begin{document}
+
+Page 136
+\section{If $B=\text{ball} l^{\infty}$, show that $d(\phi, \psi) = \sum_{j=1}^{\infty}{2^{-j} | \phi(j) - \psi(j)|}$ defines a metric on $B$ and that this metrics defines the weak-star topology on $B$}
+
+$d$ is a metric:
+
+$d(\phi, \phi) = \sum_{j=1}^{\infty}{2^{-j} | \phi(j) - \phi(j)|} = 0$
+
+$d(\phi, \psi) = \sum_{j=1}^{\infty}{2^{-j} | \phi(j) - \psi(j)|} = \sum_{j=1}^{\infty}{2^{-j} | \psi(j) - \phi(j)|} = d(\psi, \phi)$
+
+
+Given an arbitrary non-negative number $j$, by the triangle inequality:
+\begin{align}
+| ( \phi(j) - \psi(j) ) + (\psi(j) - \rho(j) )| &\le | \phi(j) - \psi(j)| +  | \psi(j) - \rho(j)| \\
+| \phi(j) - \rho(j)| &\le | \phi(j) - \psi(j)| +  | \psi(j) - \rho(j)| \\
+\end{align}
+
+Therefore, since $j$ was chosen arbitrarily:
+\begin{align}
+\sum_{j=1}^{\infty}{2^{-j} | \phi(j) - \rho(j)|} &\le \sum_{j=1}^{\infty}{2^{-j} | \phi(j) - \psi(j)|} + \sum_{j=1}^{\infty}{2^{-j} | \psi(j) - \rho(j)|} \\
+d(\phi, \rho) &\le d(\phi, \psi) + \d(\psi, \rho)
+\end{align}
+
+We now have to show that given $\phi$ in $B$ and $\varepsilon>0$,  $\{\psi \in $B$ : d(\phi, \psi) < \varepsilon\}$ is open in the weak* topology.
+
+A set $U$ of $B$ is weakly open if and only if for every $x^*_0$ in $U$ there is an $\varepsilon$ and there are $x_1, ... , x_n$ in $l^1$ such that
+
+$$\bigcap^n_{i=1}\{x^*\in B : |\langle x_k, x^* - x^*_0 \rangle| < \varepsilon_j\} \subseteq U$$
+
+
+\end{document}
