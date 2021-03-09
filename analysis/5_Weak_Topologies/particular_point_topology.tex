@@ -1,0 +1,31 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amssymb,amsmath}
+
+\begin{document}
+
+\section{Show that the particular point topology is $T_0$ but not $T_1$}
+
+Consider the particular point topology of a set $X$ cardinality $\ge 3$ with particular point $x$, that is all sets containing $x$ are open as is the empty set, but no other sets.
+
+Consider two arbitrary "other" points $x_1$ and $x_2$. 
+
+To show $X$ is $T_0$ consider the two cases:
+
+Case 1: $x$ and $x_1$. $x$ has an open neighborhood $\{x\}$ that does not contain $x_1$.
+
+Case 2: $x_1$ and $x_2$. $x_1$ has an open neighborhood $\{x, x_1\}$ that does not contain $x_2$.
+
+This is sufficient to prove the statement for all pairs of points, since $x_1$ and $x_2$ were chosen arbitrarily, and every pair of points falls into one of these cases.
+
+To show $X$ is not $T_1$, consider the case $x$ and $x_1$. Every open set containing $x_1$ will also contain $x$ (since all non-empty open sets contain $x$)
+
+\section{Show that the particular point topology is not Hausdorf}
+
+Obviously if a space is not $T_1$ it can't be $T_2$.
+
+A more illustrative proof starts with the fact limits in Hausdorf are unique. So we must construct a sequence that converges to more than one point.
+
+Consider any sequence $s_n$ that is eventually $x$. This sequence has $x$ as a limit, but it also has every other point in the space. In the case of $x_1$, every neighborhood contains of $\{x, x_1\}$, which $s_n$ eventually never leaves.
+
+\end{document}
