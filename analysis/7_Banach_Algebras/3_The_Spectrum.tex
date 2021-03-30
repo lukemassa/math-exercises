@@ -1,0 +1,22 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amssymb,amsmath}
+
+\begin{document}
+
+\section{If $\mathscr{A}$ is a Banach algebra with identity and $a \in \mathscr{A}$ and is nilpotent (that is, $a^n=0$ for some $n$), then $\sigma(a) = \{0\}$}
+
+Firstly, assume $a$ is invertible. Then 
+
+\begin{align*}
+    a^n &= 0 \\
+    (a^{-1})^n a^n &= (a^{-1})^n 0 \\
+    1 &= 0
+\end{align*}
+
+a contradiction, so $0 \in \sigma(a)$.
+
+Next, $|| (a+1) - 1 || = || a || \le || a^n || ^{1/n} = 0 < 1$, so by Lemma 2.1, $a+1$ is invertible, so $a+1 \not \in \sigma(a)$. TODO: extend argument to all values a + somehow?
+
+
+\end{document}

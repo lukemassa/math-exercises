@@ -1,0 +1,20 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amssymb,amsmath}
+
+\begin{document}
+
+\section{If $S:l_p \to l_p$ is defined by $S(\alpha_1, \alpha_2, ...) =(0, \alpha_1, \alpha_2, ...)$ describe the lattice of invariant subspaces of S}
+
+$\mathscr{M}_n=\{x\in l^p:x(k)=0 \text{ for } 1 \le k \le n\}$, then $\mathscr{M}_n \in \text{Lat}S$, if $x \in \mathscr{M}_n$, so is $S(x)$, since they both start with at least $n$ 0s.
+
+$\mathscr{M}_{n+1} \in \mathscr{M}_n$ since if a series begins w n+1 0s it will also begin with n zeros.
+
+Claim: These subspaces, together with the zero element and all of $l^p$ represent all of Lat T (which is thus a totally ordered set).
+
+Let $X$ be an arbitrary set in $l_p$, and $n$ be the number such every element of $X$ has at 0s in at least the first $n$ slots. The claim is $X = M_n$. 
+
+That $X \subset M_n$ is obvious. To show $M_n \subset X$, pick an arbitrary element that starts with n 0s, say $x_0=(0_1, 0_2, ... , 0_n, a_{n+1}, a_{n+2},...)$.  Then X must also include $x_1=(0_1, 0_2, ..., 0_n, 0_{n+1}, a_{n+1}, a_{n+2},...)$ and so on. The linear combination of all $x$ is (almost) all of $M_n$. (TODO: Finish. Take the closure maybe?)
+
+
+\end{document}
