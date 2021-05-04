@@ -16,7 +16,13 @@ Firstly, assume $a$ is invertible. Then
 
 a contradiction, so $0 \in \sigma(a)$.
 
-Next, $|| (a+1) - 1 || = || a || \le || a^n || ^{1/n} = 0 < 1$, so by Lemma 2.1, $a+1$ is invertible, so $a+1 \not \in \sigma(a)$. TODO: extend argument to all values a + somehow?
+Next, we need to show that $a-\alpha$ for any $\alpha \in \mathbb{C}$ is invertible.
+
+If $1 + a + a^2 ...$ converges, it will converge to $1 / (1-a)$ by the geometric series. Since $a^n=0$, all terms $\ge n$ vanish, hence the series converges, and $1/(1-a) \in \mathscr{A}$
+
+Since $\mathscr{A}$ is closed under multiplication, it also contains $1/(a-1)$, hence $a-1$ is invertible, so $1 \not \in \sigma(a)$. 
+
+TODO: Extend to the other $\alpha \in \mathbb{C} \setminus 0 $ (maybe some simple algebra trick?)
 
 
 \end{document}
