@@ -6,14 +6,14 @@
 
 \section{Why does Theorem VIII.1.14 not contradict Example VII.5.1}
 
-Let $\mathscr{A} \subseteq \mathscr{B}$ be Banach Algebras.
+Take $\mathbb{T}$ as the unit circle in the complex plane, and take $\mathscr{A} = C(\mathbb{T})$ and $\mathscr{B}\subset \mathscr{A}$ the closure in $\mathscr{A}$ of polynomials in $z$. $\sigma_{\mathscr{A}}(z)=\mathbb{T}$ and $\sigma_{\mathscr{B}}(z)= cl \mathbb{T} =$ unit disk.
 
-Take $X \equiv \{a-\lambda I : \lambda \in \mathbb{C} \}$. By VII.5.4 (pg 207), $\sigma_{\mathscr{B}}(a) \subseteq \sigma_{\mathscr{A}}(a)$.
+This appears to contradict VIII.1.14 since $\mathbb{B}$ is a subset of $\mathscr{A}$ with a common identity (namely the function that maps $\mathbb{T}$ to 1) and common norm (namely the sup norm), yet the spectra of a shared point (in this case z) differ.
 
-This can be interpreted as saying in general that there are elements of X that are not invertible in $\mathscr{A}$ but are invertible in $\mathscr{B}$ since there simply more elements in $\mathscr{B}$, that might be the inverse of an element in X.
+However, the premise of VIII.1.14  requires both $\mathscr{A}$ and $\mathscr{B}$ to be C* algebras, and while $\mathscr{A}$ is closed under taking the adjoint, $\mathscr{B}$ is not.
 
-However, if both $\mathscr{A}$ and $\mathscr{B}$ are $C^*$, then by the proof of VIII.1.14, going from $\mathscr{A}$ to $\mathscr{B}$ does not add any inverses.
+Take z*, which as a function equals $z^{-1}/||z||$. The problem thus reduces to on what subset of the complex plane the function $1/z$ is holomorphic.
 
-Subsequently the elements of X that are invertible is the same when taken as a subset of $\mathscr{A}$ or $\mathscr{B}$, thus $\sigma_{\mathscr{B}}(a) = \sigma_{\mathscr{A}}(a)$.
+Here my complex analysis is too weak, but certainly the whole unit disk would be no good since it contains a pole. I believe the circle is also out because of some fact about winding numbers that I can't remember.
 
 \end{document}

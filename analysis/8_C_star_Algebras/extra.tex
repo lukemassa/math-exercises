@@ -1,0 +1,15 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amssymb,amsmath}
+
+\begin{document}
+
+\section{Prove that for a finite topological spaces, discrete is equivalent to Hausdorf}
+
+Assume a finite topological space X is discrete. Then given two points $x_1$ and $x_2$ there are the open sets $\{x_1\}$ and $\{x_2\}$ that are non-intersecting, thus X is Hausdorf. Note the assumption that the space was finite was not needed.
+
+Assume a finite topological space X is Hausdorf. Pick an arbitrary point $x$. For every $x_i \in X$ where $1 \le i \le n=|X|$, there exists an open set containing $x$ that does not contain $x_i$, call it $U_i$. Take $U=\bigcap_{i=0}^n U_i$. $U = \{x\}$ since it is in every set $U_i$ but every other point in $X$ is not in at least one $U_i$. $U$ is open, since it is the finite intersection of open sets.
+
+Since $x$ was chosen arbitrarily, the singleton set around every point is open. Thus since the union of open sets is open, any subset of $X$ is open, thus $X$ is discrete.
+
+\end{document}
