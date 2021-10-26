@@ -1,0 +1,21 @@
+\documentclass{article}
+
+\usepackage{mathrsfs,amssymb,amsmath,amsfonts}
+
+\newcommand*\conj[1]{\overline{#1}}
+
+\begin{document}
+
+\section{Let $e_0, e_1, ...$ be an orthonormal basis for $\mathscr{H}$ and let $\alpha_0, \alpha_1, ...$ be complex numbers. Define $\mathscr{D} = \{ h \in \mathscr{H} :  \sum_{0}^{\infty} | \alpha_n \langle h, e_n \rangle |^2 < \infty \}$ and let $Ah= \sum_{0}^{\infty} \alpha_n \langle h, e_n \rangle e_n$ for $h$ in $\mathscr{D}$. Then $A \in \mathscr{C}(\mathscr{H})$ with dom $A=\mathscr{D}$. Also, dom $A^*=\mathscr{D}$ and $A^*h=\sum_{0}^{\infty} \conj{\alpha_n} \langle h, e_n \rangle e_n$ for all $h$ in $\mathscr{D}$}
+
+Exercise X.1.2: Prove claims in X.1.9
+
+Since Hilbert Spaces in the chapter are assumed to be separable, to show that $\mathscr{D}$ is dense we must show that for every $h \in \mathscr{H}$, there exists a sequence $h_{\bullet}$ in $\mathscr{D}$ that converges to $h$. Let $h = \sum_{0}^{\infty} \beta_n e_n$ where all but finite number of $\beta_n$ are 0. ???
+
+Next we have to show that $A$ is closed, that is $\{ h \oplus Ah : h \in \mathscr{D}\}$ is closed in $\mathscr{H} \oplus \mathscr{H}$. Again since $\mathscr{H}$ is separable, this amounts to showing that the limit of an arbitrary sequence $h_{\bullet}$ of $\mathscr{D}$ is still in $h \oplus Ah$. Again not sure where to go from here.
+
+To show that $A^*h=\sum_{0}^{\infty} \conj{\alpha_n} \langle h, e_n \rangle e_n$, start with $\langle Ah, k \rangle = \langle h, A^*k \rangle$. 
+
+$ \langle \sum_{0}^{\infty} \alpha_n \langle h, e_n \rangle e_n, k \rangle$
+
+\end{document}
